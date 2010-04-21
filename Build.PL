@@ -7,13 +7,13 @@ use warnings;
 use Module::Build;
 use lib qw(. lib);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 my $builder = Module::Build->new(
 				 module_name         => 'Test::Data::Structures',
 				 dist_author         => q(Andy Brown <setitesuk@gmail.com>),
 				 dist_version        => $VERSION,
-				 dist_abstract       => q[Role to clone attribute values from one class into another],
+				 dist_abstract       => q[Class to add additional helper methods to find out data within data structures],
 				 license             => 'lgpl3',
 				 requires            => {
 				  'Test::Builder' => 0,
