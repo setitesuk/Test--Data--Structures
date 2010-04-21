@@ -2,17 +2,15 @@ use strict;
 use warnings;
 use Carp;
 use English qw{-no_match_vars};
-use Test::Builder::Tester tests => 58
+use Test::Builder::Tester tests => 2;
 use Test::More;
 use Test::Exception;
-use lib qw{t};
 
 BEGIN {
   use_ok( q{Test::Structures::Data} );
 }
 
-{
-  my $hash_of_results = {
+my $hash_of_results = {
       row1  =>  qq{ATCACG\t1\n},
       row10 =>  qq{TAGCTT\t10\n},
       row9  =>  qq{GATCAG\t9\n},
@@ -24,9 +22,18 @@ BEGIN {
       row3  =>  qq{TTAGGC\t3\n},
       row2  =>  qq{CGATGT\t2\n},
       row11 =>  qq{GGCTAC\t11\n},
-  };
+};
 
+{
+  test_out( qq{ok 1 - finds value} );
   is_value_found_in_hash_values( qq{ATCACG\t1\n}, $hash_of_results , q{finds value});
-
+  test_test( q{is_value_found_in_hash_values} );
 }
+#{
+#  test_out(  q{not ok 1 - finds value} );
+#  test_diag( qr/Failed\ test\ 'finds\ value'/ );
+#  test_fail(+1);
+#  is_value_found_in_hash_values( qq{ATCAC\t1\n}, $hash_of_results , q{finds value});
+#  test_test( q{is_value_found_in_hash_values} );
+#}
 1;

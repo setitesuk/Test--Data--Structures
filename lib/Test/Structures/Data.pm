@@ -18,7 +18,7 @@ my $test = Test::Builder->new();
 
 =head1 NAME
 
-Test::Data::Structures
+Test::Structures::Data
 
 =head1 VERSION
 
@@ -27,7 +27,7 @@ $LastChangedRevision$
 =head1 SYNOPSIS
 
   use Test::More tests => 21;
-  use Test::Data::Structures;
+  use Test::Structures::Data;
 
   is_value_found_in_hash_values( $value, $href, $optional_description );
 
