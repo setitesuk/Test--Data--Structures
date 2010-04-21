@@ -7,7 +7,7 @@ use warnings;
 use Module::Build;
 use lib qw(. lib);
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 my $builder = Module::Build->new(
 				 module_name         => 'Test::Data::Structures',
