@@ -7,7 +7,7 @@ use strict;
 use warnings;
 use Carp;
 use English qw{-no_match_vars};
-use Readonly; Readonly::Scalar our $VERSION => 0.025;
+use Readonly; Readonly::Scalar our $VERSION => 0.03;
 
 use base qw{Exporter};
 our @EXPORT = qw{is_value_found_in_hash_values}; ## no critic (Modules::ProhibitAutomaticExportation)
