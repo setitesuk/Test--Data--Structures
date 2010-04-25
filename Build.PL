@@ -7,7 +7,7 @@ use warnings;
 use Module::Build;
 use lib qw(. lib);
 
-our $VERSION = 0.03;
+our $VERSION = 0.025;
 
 my $builder = Module::Build->new(
 				 module_name         => 'Test::Data::Structures',
@@ -26,6 +26,7 @@ my $builder = Module::Build->new(
 				 build_requires      => {
 							 'Test::More' => '0.8',
                'Test::Builder' => 0,
+               'Test::Exception' => 0,
 							},
 				 build_recommends    => {
 							 'Test::Perl::Critic' => 0,

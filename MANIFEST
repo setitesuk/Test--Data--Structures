@@ -1,6 +1,8 @@
 Build.PL
 Changes
 MANIFEST
+MANIFEST.SKIP
+META.yml
 README
 lib/Test/Structures/Data.pm
 t/00-critic.t
@@ -11,4 +13,3 @@ t/00-podcoverage.t
 t/10-Test_Structures_Data.t
 t/perlcriticrc
 Makefile.PL
-META.yml
